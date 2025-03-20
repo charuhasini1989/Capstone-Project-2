@@ -1,85 +1,158 @@
-.text-center
-{
-    font-family: "Exo 2", sans-serif;
-    font-size: 3rem;
+/* General Styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;         /* Disable horizontal scroll */
+  box-sizing: border-box;     /* Ensure proper sizing */
+  font-family: "Exo 2", sans-serif;
 }
 
-#Hero img
-{
-    margin: 50px;
+/* Text Styling */
+.text-center {
+  font-size: 3rem;
 }
 
-#Hero
-{
-    background-color: #eaeaf2;
-    padding: 50px;
+/* Hero Section */
+#Hero {
+  width: 100vw;
+  background-color: rgb(234, 234, 242);
+  padding: 50px;
+  text-align: center;
 }
 
-#Hero h1
-{
-    font-family: "Exo 2", sans-serif;
-    font-size: 4rem;
-    color: #398adb;
+#Hero img {
+  margin: 50px;
+  border-radius: 50%;
 }
 
-/* Make the p-wrapper match the h1 width */
+/* Bonjour Section Styling */
 .p-wrapper {
+  display: inline-block;
+  width: fit-content;              /* Match the Bonjour width */
+  max-width: 100%;
+  border: 2px solid #6610f2;       /* Optional border for visibility */
+  padding: 10px 20px;              /* Add padding for breathing room */
+  background-color: #f8f9fa;       /* Light background */
+  box-sizing: border-box;
+  text-align: center;              /* Center the text inside the box */
+  white-space: pre-line;           /* Keep line breaks for multiline display */
+}
 
-    display: inline-block;
-    width: fit-content;              /* Match the Bonjour width */
-    max-width: 100%;
-    border: 2px solid #6610f2;       /* Optional border for visibility */
-    padding: 1px 20px;              /* Add padding for breathing room */
-    background-color: #f8f9fa;       /* Light background */
-    box-sizing: border-box;
-    text-align: center;              /* Center the text inside the box */
-    white-space: pre-line;           /* Keep line breaks for multiline display */
-  }
-  .p-wrapper p {
-    font-size: 1.6rem;                      /* Remove default margin */
-    font-family: "Lora", serif;             /* Use a serif font */
-  }
-  
-  /* Skills section styling */
+.p-wrapper p {
+  font-size: 1.6rem;
+  font-family: "Lora", serif;
+  color: #333;
+  margin: 0;
+}
+
+/* Skills Section */
 #skills {
-    background-color: #f8f9fa;                /* Light background */
-    padding: 80px 0;
-  }
-  
-  /* Center and style the list */
-  .skills-list {
-    list-style: none;                          /* Remove bullet points */
-    display: flex;                             /* Flexbox layout */
-    justify-content: center;                   /* Center horizontally */
-    align-items: center;                       /* Center vertically */
-    flex-direction: column;                    /* Stack elements vertically */
-    gap: 30px;                                 /* Space between list items */
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Style each list item */
-  .skills-list li {
-    display: flex;
-    flex-direction: column;                    /* Stack text and image */
-    align-items: center;                       /* Center content */
-    text-align: center;
-  }
-  
-  /* Image styling */
-  .skills-list img {
-    width: 150px;                              /* Consistent image size */
-    height: 150px;
-    border-radius: 10px;                       /* Rounded corners *//* Subtle shadow */
+  background-color: rgb(234, 234, 242);
+  padding: 80px 0;
+}
 
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Skill Items */
+.skills-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Skill Image Wrapper */
+.skills-list div {
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;     /* Rounded corners */
+}
+
+/* Skill Text */
+.skills-list p {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Buttons */
+.btn-basic {
+  background-color: #0D1B2A;     /* Dark blue */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-basic:hover {
+  background-color: #1B263B;     /* Slightly lighter blue on hover */
+}
+
+/* Footer Section */
+#footer {
+  background: url('./foot.jpg') no-repeat center center;
+  background-size: cover;         /* Cover the entire footer */
+  background-attachment: fixed;   /* Keep the image fixed while scrolling */
+  padding: 80px 0;
+  color: white;
+  text-align: center;
+}
+
+/* Footer Links */
+#footer a, #footer p {
+  color: white !important;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer a:hover {
+  color: #ccc !important;         /* Light gray on hover */
+}
+
+/* Tenor GIF Embed */
+.tenor-gif-embed iframe {
+  pointer-events: none;           /* Prevent interaction */
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .text-center {
+      font-size: 2rem;
   }
-  
-  /* Skill text */
-  .skills-list p {
-    font-family: "Exo 2", sans-serif;
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 15px;
+
+  #Hero img {
+      width: 200px;
+      height: 200px;
   }
-  
-  
+
+  .skills-list div {
+      width: 250px;
+      height: 250px;
+  }
+
+  .btn-basic {
+      padding: 8px 16px;
+  }
+
+  #footer {
+      padding: 50px 0;
+  }
+}
+#connect{
+  background-color: rgb(234, 234, 242);
+  padding: 80px 0;
+}
